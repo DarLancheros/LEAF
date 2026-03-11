@@ -1,0 +1,15 @@
+{
+  "name": "Sistema LEAF",
+  "short_name": "LEAF",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1a4d32",
+  "theme_color": "#1a4d32",
+  "icons": [
+    {
+      "src": "logo-leaf.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

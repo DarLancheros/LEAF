@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAF - Dashboard Empleado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <h1 class="logo">LEAF</h1>
+            <span class="logo-subtitle">ColCall.com</span>
+        </div>
+        <div class="header-right">
+            <button id="logoutBtn" class="btn btn-logout">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <!-- Perfil del empleado -->
+        <div class="card profile-card">
+            <div class="profile-header">
+                <div class="avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h2 id="employeeName">Carolina Castro Sarmiento</h2>
+                    <div class="profile-details">
+                        <div class="detail">
+                            <i class="fas fa-id-card"></i>
+                            <span>Documento: <strong id="employeeDoc">1000222555</strong></span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-phone"></i>
+                            <span>Teléfono: <strong id="employeePhone">3502224444</strong></span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-home"></i>
+                            <span>Dirección: <strong id="employeeAddress">Xr24#04-103</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gestión Documental -->
+        <div class="profile-info">
+            <h2 id="employeeName"></h2> <div class="profile-details">
+        </div>
+        </div>
+                <div class="detail-item">
+                    <i class="fas fa-id-card"></i>
+                    <span>Documentos <span id="employeeDoc"></span></span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span id="employeePhone"></span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="employeeAddress"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="card">
+            <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="action-bar-docs"></div> </div>
+            <div class="documents-list">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer/Navegación -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Documentos</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span>Notificaciones</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-cog"></i>
+            <span>Ajustes</span>
+        </a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
