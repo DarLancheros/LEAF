@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAF - Panel de Administración</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="admin-page">
+
+<!-- Header -->
+<header class="header">
+    <div class="header-left">
+        <h1 class="logo">LEAF</h1>
+        <span class="logo-subtitle">ColCall.com</span>
+        <span class="admin-badge">
+<i class="fas fa-shield-alt"></i> Modo Administrador
+</span>
+    </div>
+    <div class="header-right">
+        <div class="header-info">
+            <i class="fas fa-user-tie"></i>
+            <span>Administrador</span>
+        </div>
+        <button id="logoutBtn" class="btn btn-logout">
+            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+        </button>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="container">
+    <!-- Estadísticas -->
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+                <h3 id="totalEmployees">9</h3>
+                <p>Empleados Activos</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="stat-info">
+                <h3>$16,488.55</h3>
+                <p>Costo Nómina 01/02/2025</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-file-contract"></i>
+            </div>
+            <div class="stat-info">
+                <h3>24</h3>
+                <p>Documentos Pendientes</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Barra de búsqueda y acciones -->
+    <div class="action-bar">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="employeeSearch" placeholder="Buscar empleado...">
+        </div>
+        <button class="btn btn-primary" id="addEmployeeBtn">
+            <i class="fas fa-user-plus"></i> Agregar Empleado
+        </button>
+    </div>
+
+    <!-- Lista de empleados -->
+    <div class="card">
+        <div class="card-header">
+            <h2><i class="fas fa-list"></i> Empleados Activos</h2>
+            <span class="badge active">Activos: 9</span>
+        </div>
+        <div class="table-container">
+            <table class="employees-table">
+                <thead>
+                <tr>
+                    <th>Empleado</th>
+                    <th>Cargo</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="employeesTable">
+                <!-- Los empleados se cargarán dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Información de nómina -->
+
+        <div class="payroll-info">
+            <div class="payroll-detail">
+                <h4><i class="fas fa-calculator"></i> Información de Nómina</h4>
+                <p>Fecha de corte: <strong>01/02/2025</strong></p>
+                <p>Total nómina: <strong class="total-payroll">$16,488.55</strong></p>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-file-invoice-dollar"></i> Pago de Nóminas
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+<!-- Footer/Navegación -->
+
+<nav class="bottom-nav">
+    <a href="#" class="nav-item active">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+    </a>
+    <a href="#" class="nav-item">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <span>Nómina</span>
+    </a>
+</nav>
+
+<style>
+    .modal-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999; }
+    .btn-icon { background:none; border:none; cursor:pointer; font-size: 1.1rem; }
+</style>
+
+<script src="app.js"></script>
+<!-- Modal -->
+<script src="app.js"></script>
+
+<div id="modalDetalle" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center;">
+    <div class="modal-content" style="background: white; width: 90%; max-width: 400px; padding: 25px; border-radius: 15px; position: relative; text-align: center;">
+        <h2 id="detNombre" style="color: #2e7d32; margin-bottom: 15px;">Detalle</h2>
+        <div id="detCalculos" style="text-align: left; background: #f9f9f9; padding: 15px; border-radius: 10px; border-left: 5px solid #2e7d32;">
+        </div>
+        <button onclick="cerrarModal()" class="btn btn-danger" style="width: 100%; margin-top: 20px; background: #f44336; color: white; border: none; padding: 10px; border-radius: 8px; cursor: pointer;">
+            Cerrar
+        </button>
+    </div>
+</div>
+</body>
+</html>
+</body>
+
+</html>

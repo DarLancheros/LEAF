@@ -1,0 +1,13 @@
+# Android Studio / Gradle
+.gradle/
+build/
+local.properties
+.idea/workspace.xml
+.idea/libraries
+.idea/caches
+*.iml
+captures/
+.externalNativeBuild
+.cxx
+*.apk
+*.jks

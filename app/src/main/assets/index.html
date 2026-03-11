@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAF - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="login-page">
+    <div class="container">
+        <!-- Logo y título -->
+        <div class="logo-container">
+            <h1 class="logo">LEAF</h1>
+            <p class="logo-subtitle">ColCall.com</p>
+        </div>
+
+        <!-- Formulario de login -->
+        <div class="card login-card">
+            <h2>Iniciar Sesión</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i> Usuario
+                    </label>
+                    <input type="text" id="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i> Contraseña
+                    </label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Ingresar
+                </button>
+                
+                <div class="forgot-password">
+                    <a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+
+            <!-- Información de usuarios de prueba -->
+            <div class="demo-credentials">
+                <h4><i class="fas fa-info-circle"></i> Credenciales de prueba:</h4>
+                <p><strong>Admin:</strong> usuario: admin | contraseña: 1234</p>
+                <p><strong>Empleado:</strong> usuario: empleado | contraseña: 1234</p>
+            </div>
+        </div>
+        <div id="recoveryCard" class="card" style="display:none;">
+            <h2>Recuperar Cuenta</h2>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Ingresa tu correo electrónico para restablecer tu contraseña.</p>
+
+            <form id="recoveryForm">
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                    <input type="email" id="recoveryEmail" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Enviar enlace
+                </button>
+
+                <div class="forgot-password">
+                    <a href="#" id="backToLogin">Volver al inicio de sesión</a>
+                </div>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>LEAF System &copy; 2025 - Sistema de Gestión de Empleados</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
